@@ -1,4 +1,7 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+// Imported, not written as java.util.Properties: inside the android { } block the Kotlin DSL
+// resolves the bare name `java` to Gradle's own `java` extension, not to the Java package.
+import java.util.Properties
 
 plugins {
     id("com.android.application")
@@ -26,7 +29,7 @@ android {
     val keystoreProps = rootProject.file("keystore.properties")
     signingConfigs {
         if (keystoreProps.exists()) {
-            val p = java.util.Properties().apply { keystoreProps.inputStream().use { load(it) } }
+            val p = Properties().apply { keystoreProps.inputStream().use { load(it) } }
             create("upload") {
                 storeFile = file(p.getProperty("storeFile"))
                 storePassword = p.getProperty("storePassword")
