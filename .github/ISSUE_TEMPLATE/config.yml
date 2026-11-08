@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/officialdedsec/mura-messenger/security/advisories/new
+    about: Report security flaws privately. Please never use a public issue for these.
+  - name: Question or usage help
+    url: https://github.com/officialdedsec/mura-messenger/blob/main/docs/FAQ.md
+    about: Check the FAQ first — most questions are answered there.

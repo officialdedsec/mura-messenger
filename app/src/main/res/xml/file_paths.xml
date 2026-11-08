@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Only the camera's temporary capture file is shared (with the camera app). Chats and media are never exposed here. -->
+<paths>
+    <cache-path name="capture" path="capture/" />
+</paths>

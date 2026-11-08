@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mura mark: a center node joined to three peers, one relay path highlighted -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:pathData="M54,54 L36,40 M54,54 L73,38 M54,54 L70,72 M36,40 L40,70 L70,72"
+        android:strokeWidth="2.2"
+        android:strokeColor="#FF2E3A4E"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M36,40 L54,54 L70,72"
+        android:strokeWidth="3.2"
+        android:strokeColor="#FFFFB547"
+        android:strokeLineCap="round" />
+    <path
+        android:fillColor="#FFFFB547"
+        android:pathData="M54,54m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0" />
+    <path
+        android:fillColor="#FF151A22"
+        android:strokeColor="#FFFFB547"
+        android:strokeWidth="2.6"
+        android:pathData="M36,40m-4.5,0a4.5,4.5 0,1 1,9 0a4.5,4.5 0,1 1,-9 0" />
+    <path
+        android:fillColor="#FF151A22"
+        android:strokeColor="#FF7CC4FF"
+        android:strokeWidth="2.2"
+        android:pathData="M73,38m-3.5,0a3.5,3.5 0,1 1,7 0a3.5,3.5 0,1 1,-7 0" />
+    <path
+        android:fillColor="#FF151A22"
+        android:strokeColor="#FFFFB547"
+        android:strokeWidth="2.6"
+        android:pathData="M70,72m-4.5,0a4.5,4.5 0,1 1,9 0a4.5,4.5 0,1 1,-9 0" />
+    <path
+        android:fillColor="#FF151A22"
+        android:strokeColor="#FF7CC4FF"
+        android:strokeWidth="2.2"
+        android:pathData="M40,70m-3.5,0a3.5,3.5 0,1 1,7 0a3.5,3.5 0,1 1,-7 0" />
+</vector>

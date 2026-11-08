@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Mura — Encrypted Messenger That Works Without Internet or Servers</title>
+<meta name="description" content="Mura is a free, open-source encrypted messenger for Android. Send messages and make calls over Bluetooth mesh or Tor — no servers, no SIM, no account.">
+<meta name="keywords" content="open source encrypted messenger, offline messaging app, bluetooth mesh messenger, messenger without phone number, serverless messenger, tor messenger android, encrypted chat without internet, peer to peer messenger, off-grid messaging, decentralized messenger, anonymous messaging app, censorship resistant messaging">
+<meta name="author" content="DedSec Cyber Security Research Institute">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0B0E13">
+<link rel="canonical" href="https://officialdedsec.github.io/mura-messenger/">
+<link rel="icon" href="images/icon-160.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mura">
+<meta property="og:title" content="Mura — encrypted messenger that works without internet or servers">
+<meta property="og:description" content="End-to-end encrypted chat and calls over Bluetooth mesh and Tor. No servers, no phone number, no account. Free and open source.">
+<meta property="og:image" content="https://officialdedsec.github.io/mura-messenger/images/feature-graphic.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta property="og:image:alt" content="Mura — encrypted mesh messenger, Bluetooth and Tor, no servers, no phone number">
+<meta property="og:url" content="https://officialdedsec.github.io/mura-messenger/">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mura — encrypted messenger that works without internet or servers">
+<meta name="twitter:description" content="End-to-end encrypted chat and calls over Bluetooth mesh and Tor. No servers, no phone number, no account. Free and open source.">
+<meta name="twitter:image" content="https://officialdedsec.github.io/mura-messenger/images/feature-graphic.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Mura",
+  "applicationCategory": "CommunicationApplication",
+  "operatingSystem": "Android 9.0 or later",
+  "softwareVersion": "2.7.9",
+  "description": "Free, open-source encrypted messenger for Android. End-to-end encrypted messages, files and voice calls over Bluetooth LE mesh networking and Tor onion services, with no servers, no phone number and no account.",
+  "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+  "isAccessibleForFree": true,
+  "author": {
+    "@type": "Organization",
+    "name": "DedSec Cyber Security Research Institute",
+    "url": "https://www.dedseec.com"
+  },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": [
+    "Works with no internet over Bluetooth LE mesh",
+    "Tor onion service built into the app",
+    "End-to-end encrypted voice calls",
+    "No phone number or account required",
+    "No servers and no telemetry",
+    "Runs without Google Play Services"
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --ink:#0B0E13; --surface:#151A22; --surface2:#1C2330; --line:#263041;
+    --text:#ECEFF4; --soft:#B8C1D0; --muted:#9AA4B5;
+    --amber:#FFB547; --on-amber:#1A1204; --blue:#7CC4FF; --mint:#8FE3B0; --red:#E5484D;
+    --maxw:1080px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink); color:var(--text);
+    font-family:"IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:17px; line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  a{color:var(--amber);text-decoration:none}
+  a:hover{text-decoration:underline}
+  h1,h2,h3{line-height:1.2;letter-spacing:-.02em;font-weight:650}
+  h1{font-size:clamp(2.1rem,6vw,3.6rem)}
+  h2{font-size:clamp(1.5rem,3.6vw,2.2rem);margin-bottom:.6em}
+  h3{font-size:1.15rem;margin-bottom:.35em}
+  p{color:var(--soft)}
+  section{padding:76px 0;border-top:1px solid var(--line)}
+  .lede{font-size:1.2rem;color:var(--soft);max-width:62ch}
+
+  /* hero */
+  header{padding:64px 0 76px;background:
+    radial-gradient(90% 60% at 50% 0%, #161C26 0%, #0D1117 48%, var(--ink) 100%)}
+  .logo{display:flex;align-items:center;gap:14px;margin-bottom:46px}
+  .logo img{width:44px;height:44px;border-radius:12px}
+  .logo span{font-weight:650;font-size:1.3rem;letter-spacing:-.02em}
+  .tag{display:inline-block;background:rgba(255,181,71,.12);color:var(--amber);
+    border:1px solid rgba(255,181,71,.3);border-radius:999px;padding:6px 16px;
+    font-size:.8rem;font-weight:550;margin-bottom:24px}
+  .hero-sub{font-size:1.3rem;color:var(--soft);max-width:60ch;margin:22px 0 36px}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 28px;border-radius:14px;font-weight:600;font-size:1rem}
+  .btn-a{background:var(--amber);color:var(--on-amber)}
+  .btn-b{background:transparent;color:var(--text);border:1px solid var(--line)}
+  .btn:hover{text-decoration:none;opacity:.9}
+  .hero-img{margin-top:56px;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+  .hero-img img{display:block;width:100%}
+
+  /* grids */
+  .grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));margin-top:38px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px}
+  .card h3{color:var(--text)}
+  .card p{font-size:.95rem;margin:0}
+  .k{color:var(--amber);font-weight:600}
+  .shots{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:38px}
+  .shot img{width:100%;display:block;border-radius:14px;border:1px solid var(--line)}
+  .shot figcaption{font-size:.85rem;color:var(--muted);margin-top:10px;text-align:center}
+
+  /* table */
+  .scroll{overflow-x:auto;margin-top:34px;border:1px solid var(--line);border-radius:16px}
+  table{border-collapse:collapse;width:100%;min-width:720px;font-size:.92rem}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line)}
+  thead th{background:var(--surface2);font-weight:600;white-space:nowrap}
+  tbody tr:last-child td{border-bottom:none}
+  td:first-child,th:first-child{color:var(--text)}
+  .mura{background:rgba(255,181,71,.07)}
+  .y{color:var(--mint);font-weight:600}
+  .n{color:var(--red)}
+  .p{color:var(--muted);font-size:.86rem}
+  ul{color:var(--soft);padding-left:1.3em;margin-top:.7em}
+  li{margin-bottom:.45em}
+  .warn{background:rgba(229,72,77,.09);border:1px solid rgba(229,72,77,.35);
+    border-radius:16px;padding:24px;margin-top:30px}
+  .warn strong{color:var(--red)}
+  footer{padding:60px 0 80px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+  .kw{color:#5C6675;font-size:.8rem;line-height:1.8;margin-top:28px}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo">
+      <img src="images/icon-160.png" alt="Mura logo">
+      <span>Mura</span>
+    </div>
+    <div class="tag">Free &amp; open source · GPL-3.0 · Android 9+</div>
+    <h1>Messaging that needs<br>no network and no servers</h1>
+    <p class="hero-sub">
+      End-to-end encrypted messages, files and voice calls over <strong>Bluetooth mesh</strong>
+      and <strong>Tor</strong>. No phone number. No account. No company in the middle —
+      not even us.
+    </p>
+    <div class="btns">
+      <a class="btn btn-a" href="#download">Download</a>
+      <a class="btn btn-b" href="https://github.com/officialdedsec/mura-messenger">View source on GitHub</a>
+    </div>
+    <div class="hero-img">
+      <img src="images/feature-graphic.png" width="1024" height="500"
+           alt="Mura — encrypted mesh messenger over Bluetooth and Tor, no servers, no phone number">
+    </div>
+  </div>
+</header>
+
+<section id="what">
+  <div class="wrap">
+    <h2>A messenger with nothing behind it</h2>
+    <p class="lede">
+      Every other private messenger still needs something: a phone number, an account, a
+      server to relay through, a company to trust. Mura needs none of them. Your identity is
+      a key pair your phone generates and never transmits, and your messages travel directly
+      between devices.
+    </p>
+    <div class="grid">
+      <div class="card">
+        <h3>Offline, over Bluetooth</h3>
+        <p>No network of any kind. If your contact is out of range, nearby Mura phones carry
+        the sealed message and hop it onward until it arrives. <span class="k">Carriers can
+        never read what they carry.</span></p>
+      </div>
+      <div class="card">
+        <h3>Online, over Tor</h3>
+        <p>Your phone runs Tor internally and becomes its own onion service.
+        <span class="k">Neither phone learns the other's IP address</span>, and nothing is
+        sent before Tor connects — not even a DNS lookup.</p>
+      </div>
+      <div class="card">
+        <h3>No sign-up at all</h3>
+        <p>No phone number, no email, no username on any registry.
+        <span class="k">Nothing about you exists anywhere</span> except on your device and
+        those of people you chose to talk to.</p>
+      </div>
+      <div class="card">
+        <h3>Forward secrecy everywhere</h3>
+        <p>Double Ratchet for chats, hash-ratcheted sender keys for groups, one-time keys per
+        call. <span class="k">Yesterday's messages stay safe</span> even if today's key leaks.</p>
+      </div>
+      <div class="card">
+        <h3>Metadata resistance</h3>
+        <p>Sealed sender hides who wrote to whom, even from relays. Uniform padding means
+        <span class="k">a one-word reply looks exactly like a paragraph</span> on the wire.</p>
+      </div>
+      <div class="card">
+        <h3>No Google anything</h3>
+        <p>No Play Services, no Firebase, no push service, no analytics, no crash reporter, no
+        advertising ID. <span class="k">Runs natively on GrapheneOS and CalyxOS.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="screens">
+  <div class="wrap">
+    <h2>What it looks like</h2>
+    <p class="lede">A normal messenger, with the infrastructure removed.</p>
+    <div class="shots">
+      <figure class="shot"><img src="images/screens/01-no-number-sm.png" alt="Mura onboarding — no phone number, no email, just a key pair"><figcaption>No number, no email</figcaption></figure>
+      <figure class="shot"><img src="images/screens/02-chats-sm.png" alt="Mura chat list showing mesh status and locked chats"><figcaption>Your chats</figcaption></figure>
+      <figure class="shot"><img src="images/screens/03-chat-sm.png" alt="Encrypted Mura conversation with disappearing and view-once messages"><figcaption>Sealed conversations</figcaption></figure>
+      <figure class="shot"><img src="images/screens/04-mesh-sm.png" alt="Mura mesh radar showing nearby Bluetooth phones relaying messages"><figcaption>The Bluetooth mesh</figcaption></figure>
+      <figure class="shot"><img src="images/screens/05-tor-sm.png" alt="Mura Tor settings with Snowflake and obfs4 bridges"><figcaption>Online via Tor</figcaption></figure>
+      <figure class="shot"><img src="images/screens/06-call-sm.png" alt="End-to-end encrypted voice call in Mura"><figcaption>Encrypted calls</figcaption></figure>
+      <figure class="shot"><img src="images/screens/07-privacy-sm.png" alt="Mura privacy settings — app lock, screenshot blocking, panic erase"><figcaption>Privacy controls</figcaption></figure>
+      <figure class="shot"><img src="images/screens/08-add-sm.png" alt="Add a Mura contact by QR code or Mura ID"><figcaption>Add people in person</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="compare">
+  <div class="wrap">
+    <h2>How Mura differs from Signal, WhatsApp, Session, SimpleX and Briar</h2>
+    <p class="lede">
+      Mura exists because of one gap: no mainstream private messenger works when the network
+      is gone. Our nearest relative is Briar, which also does Bluetooth and Tor — Mura adds
+      voice calls and a full messaging feature set.
+    </p>
+    <div class="scroll">
+      <table>
+        <thead><tr>
+          <th></th><th class="mura">Mura</th><th>Signal</th><th>WhatsApp</th>
+          <th>Telegram</th><th>Session</th><th>SimpleX</th><th>Briar</th>
+        </tr></thead>
+        <tbody>
+          <tr><td>Works with no internet</td><td class="mura y">Yes</td><td class="n">No</td><td class="n">No</td><td class="n">No</td><td class="n">No</td><td class="n">No</td><td class="y">Yes</td></tr>
+          <tr><td>Relayed by other users' phones</td><td class="mura y">Yes</td><td class="n">No</td><td class="n">No</td><td class="n">No</td><td class="n">No</td><td class="n">No</td><td class="y">Yes</td></tr>
+          <tr><td>Tor built into the app</td><td class="mura y">Yes</td><td class="n">No</td><td class="n">No</td><td class="n">No</td><td class="p">own network</td><td class="p">via Orbot</td><td class="y">Yes</td></tr>
+          <tr><td>Voice calls</td><td class="mura y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="n">No</td></tr>
+          <tr><td>No phone number</td><td class="mura y">Yes</td><td class="p">beta only</td><td class="n">No</td><td class="n">No</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+          <tr><td>No operator servers</td><td class="mura y">Yes</td><td class="n">No</td><td class="n">No</td><td class="n">No</td><td class="n">No</td><td class="p">self-host</td><td class="y">Yes</td></tr>
+          <tr><td>E2E encrypted by default</td><td class="mura y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="n">No</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+          <tr><td>Works without Play Services</td><td class="mura y">Yes</td><td class="y">Yes</td><td class="n">No</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+          <tr><td>Open source</td><td class="mura y">Yes</td><td class="y">Yes</td><td class="n">No</td><td class="p">client only</td><td class="y">Yes</td><td class="y">Yes</td><td class="y">Yes</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="p" style="margin-top:16px">
+      Verified November 2026. Signal began testing phone-number-less registration in an
+      Android beta in September 2026; stable Signal still registers with a phone number.
+      Telegram cloud chats are not end-to-end encrypted — only opt-in Secret Chats are.
+      Corrections welcome via
+      <a href="https://github.com/officialdedsec/mura-messenger/issues">GitHub issues</a>.
+    </p>
+  </div>
+</section>
+
+<section id="privacy">
+  <div class="wrap">
+    <h2>What Mura knows about you</h2>
+    <p class="lede">Nothing. There is no mechanism by which it could.</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Data</th><th>Collected?</th></tr></thead>
+        <tbody>
+          <tr><td>Phone number</td><td class="y">Never requested</td></tr>
+          <tr><td>Email address</td><td class="y">Never requested</td></tr>
+          <tr><td>Your address book</td><td class="y">Never read</td></tr>
+          <tr><td>Location</td><td class="y">Only a location message you send deliberately</td></tr>
+          <tr><td>Message content</td><td class="y">End-to-end encrypted</td></tr>
+          <tr><td>Who you talk to</td><td class="y">Hidden by sealed sender, even from relays</td></tr>
+          <tr><td>Message sizes</td><td class="y">Hidden by padding</td></tr>
+          <tr><td>IP address</td><td class="y">Hidden by Tor</td></tr>
+          <tr><td>Analytics / telemetry</td><td class="y">None whatsoever</td></tr>
+          <tr><td>Cloud backups</td><td class="y">None — backups are files you place yourself</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="warn">
+      <strong>No independent audit yet.</strong>
+      <p style="margin-top:8px">Mura's cryptography follows well-studied designs and is
+      covered by known-answer unit tests, but review so far has been in-house. No software can
+      be promised bug-free. If your safety depends on this app, read the code, build it
+      yourself, and help us get it audited.</p>
+    </div>
+  </div>
+</section>
+
+<section id="download">
+  <div class="wrap">
+    <h2>Download</h2>
+    <p class="lede">
+      Android 9 or newer, with Bluetooth Low Energy. No Google account, no Play Services,
+      no SIM card needed.
+    </p>
+    <div class="grid">
+      <div class="card">
+        <h3>GitHub Releases</h3>
+        <p><a href="https://github.com/officialdedsec/mura-messenger/releases/latest">Latest signed APK</a>
+        with SHA-256 checksums.</p>
+      </div>
+      <div class="card">
+        <h3>F-Droid</h3>
+        <p>Planned, with reproducible builds straight from this repository.</p>
+      </div>
+      <div class="card">
+        <h3>Build it yourself</h3>
+        <p><code>./gradlew assembleDebug</code> — see
+        <a href="https://github.com/officialdedsec/mura-messenger/blob/main/docs/BUILDING.md">BUILDING.md</a>.
+        The best option, because then you know exactly what you are running.</p>
+      </div>
+    </div>
+    <div class="warn">
+      <strong>Never install Mura from a mirror or APK aggregator.</strong>
+      <p style="margin-top:8px">A tampered build of a privacy app is worse than no privacy app
+      at all. Always verify the signing certificate and checksum of anything you install.</p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>Who made it</h2>
+    <p class="lede">
+      Mura is built by the <strong>DedSec Cyber Security Research Institute</strong>, a small
+      independent security research group working on reverse engineering, malware analysis and
+      defensive security tooling.
+    </p>
+    <p style="margin-top:20px;max-width:68ch">
+      Mura came from a simple question: what would a messenger look like if you removed every
+      component that could be subpoenaed, seized, sold, bribed or switched off? The answer was
+      to remove the servers entirely — and once there is no server, there is no account, no
+      directory, no metadata pile and nothing anyone can demand from us, because we hold
+      nothing. That is not a policy promise. It is an architectural fact, and you can verify
+      it in the source.
+    </p>
+    <p style="margin-top:18px">
+      We make no money from Mura. No ads, no subscriptions, no premium tier, no funding, and
+      no data to sell. <a href="https://www.dedseec.com">dedseec.com</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:var(--text)">Private messaging should not require permission from anyone.</strong></p>
+    <p style="margin-top:14px">
+      Mura is free software under the
+      <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPL v3.0 or later</a>, distributed
+      WITHOUT ANY WARRANTY. Tor is a trademark of The Tor Project, Inc.; Mura uses Tor but is
+      not affiliated with or endorsed by The Tor Project.
+    </p>
+    <p class="kw">
+      Open-source encrypted messenger · offline messaging app · Bluetooth mesh messenger ·
+      Tor messenger for Android · serverless peer-to-peer chat · messenger without a phone
+      number · encrypted chat without internet · off-grid communication · censorship-resistant
+      messaging · decentralized messenger · anonymous messaging app · delay-tolerant networking
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

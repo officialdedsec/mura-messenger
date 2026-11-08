@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- No plain-text HTTP anywhere, and only the system's certificate authorities (no user-added CAs that could
+     be used to intercept TLS). Mura's web requests all go through Tor anyway. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
