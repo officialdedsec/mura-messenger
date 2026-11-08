@@ -358,7 +358,7 @@ By contributing you agree your work is licensed GPL-3.0-or-later.
 
 **Mura is built by the DedSec Cyber Security Research Institute.**
 
-We are a small independent security research group. We work on reverse engineering, malware
+I am an independent security researcher. I work on reverse engineering, malware
 analysis, vulnerability research and defensive security tooling, and Mura came out of a
 straightforward question: what would a messenger look like if you removed every component
 that could be subpoenaed, seized, sold, bribed or switched off?
