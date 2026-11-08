@@ -11,12 +11,12 @@ plugins {
 
 android {
     namespace = "com.mura.mesh"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.mura.mesh"
         minSdk = 28          // Android 9
-        targetSdk = 36       // Android 16
+        targetSdk = 37       // Android 17
         versionCode = 21
         versionName = "2.7.9"
     }
