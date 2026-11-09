@@ -10,7 +10,7 @@ Report privately through one of these:
 1. **GitHub Security Advisories** — [open a private advisory](../../security/advisories/new).
    This is preferred: it is encrypted, it keeps the discussion in one place, and it lets us
    credit you and issue a CVE.
-2. **Email** — `security@dedseec.com` *(replace with your real address before publishing)*.
+2. **Email** — `admin@dedseec.com` *(replace with your real address before publishing)*.
    If you want to encrypt, our PGP key is at `docs/pgp-key.asc` *(add this)*.
 
 Please include:
